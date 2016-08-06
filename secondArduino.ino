@@ -1,3 +1,5 @@
+int delay_time = 100;
+
 void setup() {
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
@@ -7,28 +9,19 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(2, HIGH);
-  delay(500);
-  digitalWrite(2, LOW);
-  digitalWrite(3, HIGH);
-  delay(500);
-  digitalWrite(3, LOW);
-  digitalWrite(4, HIGH);
-  delay(500);
-  digitalWrite(4, LOW);
-  digitalWrite(5, HIGH);
-  delay(500);
-  digitalWrite(5, LOW);
-  digitalWrite(6, HIGH);
-  delay(500);
-  digitalWrite(6, LOW);
-  digitalWrite(5, HIGH);
-  delay(500);
-  digitalWrite(5, LOW);
-  digitalWrite(4, HIGH);
-  delay(500);
-  digitalWrite(4, LOW);
-  digitalWrite(3, HIGH);
-  delay(500);
-  digitalWrite(3, LOW);
+
+	for (int i = 2; i < 7; i++) {
+		digitalWrite(i, HIGH);
+	  delay(delay_time);
+	  digitalWrite(i, LOW);
+	  delay(delay_time);
+	}
+
+	for (int i = 5; i > 2; i--) {
+		digitalWrite(i, HIGH);
+	  delay(delay_time);
+	  digitalWrite(i, LOW);
+	  delay(delay_time);
+	}
+	
 }
