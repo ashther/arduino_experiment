@@ -6,7 +6,7 @@ float tempreture;
 int delay_time = 1000;
 int hot_temp = 27;
 int ok_temp = 26;
-int delay_time_analog = 5;
+int delay_time_analog = 10;
 
 void setup() {
   pinMode(ledGreen, OUTPUT);
